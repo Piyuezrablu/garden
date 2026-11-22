@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8f1" />
+  <title>Love Garden · A little garden, grown together</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <a class="brand" href="#garden"><span class="brand-mark">✿</span><span>love garden<small>a little place for us</small></span></a>
+      <div class="couple-mini"><div class="avatars"><span>🌷</span><span>🐝</span></div><div><b>Our little garden</b><small id="connection-label">Demo garden · local</small></div><span class="online-dot"></span></div>
+      <nav class="nav"><button class="nav-item active" data-page="garden"><span>⌂</span> Garden</button><button class="nav-item" data-page="collection"><span>✿</span> Flower collection</button><button class="nav-item" data-page="progress"><span>♡</span> Our progress</button></nav>
+      <div class="sidebar-bottom"><div class="tiny-note">made with a little<br/>love &amp; sunlight <span>☀</span></div><button class="settings-link" id="open-settings">⚙ Garden settings</button></div>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><p class="eyebrow" id="date-label">A SMALL MOMENT, JUST FOR US</p><h1 id="page-title">Our little garden <span>🌼</span></h1></div><div class="top-actions"><span class="sync-pill" id="sync-status"><i></i> Saved locally</span><button class="avatar-button" title="Garden profile">🌸</button></div></header>
+      <section id="garden-page" class="page active">
+        <div class="hero-row"><div><div class="level-label">GARDEN LEVEL <span id="level-number">01</span></div><div class="level-track"><div id="xp-fill"></div></div><p class="xp-caption"><b id="xp-current">0 XP</b> <span id="xp-next">· 100 XP to next bloom</span></p></div><div class="streak-card"><span class="streak-icon">☀</span><div><b id="streak-count">0 days</b><small>growing together</small></div></div></div>
+        <div class="garden-scene" id="garden-scene"><div class="scene-sky"><span class="sun">☼</span><span class="cloud cloud-one">☁</span><span class="cloud cloud-two">☁</span><span class="butterfly">🦋</span></div><div class="garden-sign">our little patch <span>♡</span></div><div class="garden-grid" id="garden-grid" aria-label="Garden plots"></div><div class="pond"><span>✧</span><small>lil' pond</small></div><div class="scene-footer"><span>✿</span> watered with love <span>✿</span></div></div>
+        <div class="below-grid"><article class="daily-card"><div class="card-heading"><div><span class="mini-icon pink">☀</span><h2>Today's little ritual</h2></div><span class="soft-tag">DAILY</span></div><p>A tiny moment can make our garden grow.</p><div class="checkin-row"><div class="checkin-avatars"><span>🌷</span><span>🐝</span></div><div class="checkin-copy"><b id="checkin-copy">Your daily sunshine</b><small id="checkin-sub">Check in and collect 10 XP</small></div><button id="checkin-btn" class="primary-button">Check in <span>＋</span></button></div><div class="together-bonus" id="together-bonus">♡ When both check in, you earn <b>+20 bonus XP</b></div></article><article class="anniversary-card"><div class="anniv-art">♡<span>✦</span></div><div class="anniv-content"><span class="soft-tag">OUR SPECIAL DAY</span><h2 id="anniv-title">A day worth celebrating</h2><p id="anniv-desc">Set your date together in garden settings.</p><button class="text-button" id="anniv-settings">Set our date <span>↗</span></button></div></article></div>
+      </section>
+      <section id="collection-page" class="page"><div class="section-intro"><div><span class="soft-tag">A LITTLE BOTANICAL SHELF</span><h2>Flowers we've found</h2><p>Pick a seed, give it a home, and let time do its thing.</p></div><div class="seed-wallet">🌱 <b id="seed-count">8</b><small> seeds</small></div></div><div class="flower-catalog" id="flower-catalog"></div></section>
+      <section id="progress-page" class="page"><div class="section-intro"><div><span class="soft-tag">SLOWLY, BEAUTIFULLY</span><h2>Look how far we've grown</h2><p>Every little action becomes part of our garden story.</p></div></div><div class="stats-grid"><article class="stat-card"><span>🌼</span><small>Flowers planted</small><strong id="stat-flowers">0</strong></article><article class="stat-card"><span>✨</span><small>Total garden XP</small><strong id="stat-xp">0</strong></article><article class="stat-card"><span>☀️</span><small>Check-ins together</small><strong id="stat-checkins">0</strong></article></div><article class="milestone-card"><span class="milestone-flower">🌷</span><div><span class="soft-tag">NEXT LITTLE MILESTONE</span><h3 id="milestone-title">A garden in bloom</h3><p id="milestone-desc">Keep growing to unlock your next garden level.</p></div></article><div class="activity-panel"><h3>Recent garden moments</h3><div id="activity-list" class="activity-list"></div></div></section>
+      <footer class="footer">A little garden, grown together <span>♥</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="modal-backdrop" id="modal-backdrop" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><button class="modal-close" id="modal-close" aria-label="Close">×</button><div id="modal-content"></div></section></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
